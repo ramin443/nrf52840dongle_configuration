@@ -1,0 +1,2 @@
+# Load board Kconfig descriptions.
+osource "C:/Users/udash/nordic/MyApps/zephyr/boards/nordic/nrf52840dongle/Kconfig.nrf52840dongle"

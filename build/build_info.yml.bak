@@ -1,0 +1,5 @@
+west:
+  command: C:\Users\udash\AppData\Local\Programs\Python\Python313\Scripts\west build
+    -b nrf52840dongle/nrf52840 blinky_1 --pristine
+  topdir: C:\Users\udash\nordic\MyApps
+  version: 1.4.0

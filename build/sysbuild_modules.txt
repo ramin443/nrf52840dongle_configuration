@@ -1,0 +1,2 @@
+"nrf":"C:/Users/udash/nordic/MyApps/nrf":"C:/Users/udash/nordic/MyApps/nrf/sysbuild"
+"mcuboot":"C:/Users/udash/nordic/MyApps/bootloader/mcuboot":"C:/Users/udash/nordic/MyApps/bootloader/mcuboot/boot/zephyr/sysbuild"
