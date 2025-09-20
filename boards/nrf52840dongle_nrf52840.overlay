@@ -1,5 +1,3 @@
-/* boards/nrf52840dongle_nrf52840.overlay */
-
 /* ---------- PWM0: 4 servos on CH0..CH3 ---------- */
 &pwm0 {
     status = "okay";
@@ -18,26 +16,26 @@
 
 /* ---------- Consolidated pinctrl definitions ---------- */
 &pinctrl {
-    /* PWM0 default: CH0→P0.13, CH1→P0.15, CH2→P0.17, CH3→P0.20 */
+    /* PWM0 default: CH0→P0.13, CH1→P0.15, CH2→P0.17, CH3→P0.24 (updated) */
     pwm0_default: pwm0_default {
         group1 {
             psels = <
                 NRF_PSEL(PWM_OUT0, 0, 13)   /* pwm0 ch0 -> P0.13 (Servo 1) */
                 NRF_PSEL(PWM_OUT1, 0, 15)   /* pwm0 ch1 -> P0.15 (Servo 2) */
                 NRF_PSEL(PWM_OUT2, 0, 17)   /* pwm0 ch2 -> P0.17 (Servo 3) */
-                NRF_PSEL(PWM_OUT3, 0, 20)   /* pwm0 ch3 -> P0.20 (Servo 4) */
+                NRF_PSEL(PWM_OUT3, 0, 24)   /* pwm0 ch3 -> P0.24 (Servo 4) */
             >;
         };
     };
 
-    /* PWM0 sleep: same pins; 'low-power-enable' is accepted by Nordic pinctrl */
+    /* PWM0 sleep: same pins */
     pwm0_sleep: pwm0_sleep {
         group1 {
             psels = <
                 NRF_PSEL(PWM_OUT0, 0, 13)
                 NRF_PSEL(PWM_OUT1, 0, 15)
                 NRF_PSEL(PWM_OUT2, 0, 17)
-                NRF_PSEL(PWM_OUT3, 0, 20)
+                NRF_PSEL(PWM_OUT3, 0, 24)   /* updated */
             >;
             low-power-enable;
         };
