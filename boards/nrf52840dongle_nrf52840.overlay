@@ -1,0 +1,15 @@
+/* boards/nrf52840dongle_nrf52840.overlay */
+
+&pwm0 {
+    status = "okay";
+    pinctrl-0 = <&pwm0_ch0_p0_13>;   /* route CH0 to P0.13 */
+    /* do NOT set pinctrl-names here */
+};
+
+&pinctrl {
+    pwm0_ch0_p0_13: pwm0_ch0_p0_13 {
+        group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 0, 13)>;  /* PWM0 CH0 → P0.13 */
+        };
+    };
+};
